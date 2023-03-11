@@ -23,10 +23,8 @@ const { color = '#fff', ...attr } = Astro.props
     @include sp {
       font-size: 20px;
     }
-
     @include hoverable {
       transition: opacity 0.3s ease;
-
       &::after {
         content: '';
         position: absolute;
@@ -39,10 +37,8 @@ const { color = '#fff', ...attr } = Astro.props
         transform-origin: right top;
         transition: transform 0.3s;
       }
-
       &:hover {
         opacity: 1;
-
         &::after {
           transform-origin: left top;
           transform: scale(1, 1);
