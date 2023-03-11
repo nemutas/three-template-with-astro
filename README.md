@@ -2,6 +2,8 @@
 
 This repository is [Three.js](https://threejs.org/) template with [Astro](https://astro.build/).
 
+https://nemutas.github.io/three-template-with-astro/
+
 # Using
 
 - VSCode
