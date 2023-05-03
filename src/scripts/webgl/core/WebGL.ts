@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import Stats from 'three/examples/jsm/libs/stats.module'
 
 class WebGL {
   public renderer: THREE.WebGLRenderer
@@ -8,6 +9,7 @@ class WebGL {
 
   private clock = new THREE.Clock()
   private resizeCallback?: () => void
+  private stats?: Stats
 
   constructor() {
     const { width, height, aspect } = this.size
@@ -42,6 +44,11 @@ class WebGL {
     container.appendChild(this.renderer.domElement)
   }
 
+  setStats(container: HTMLElement) {
+    this.stats = Stats()
+    container.appendChild(this.stats.dom)
+  }
+
   setResizeCallback(callback: () => void) {
     this.resizeCallback = callback
   }
@@ -58,6 +65,7 @@ class WebGL {
     gl.renderer.setAnimationLoop(() => {
       this.time.delta = this.clock.getDelta()
       this.time.elapsed = this.clock.getElapsedTime()
+      this.stats?.update()
       callback()
     })
   }
