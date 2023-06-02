@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "astro": "^2.0.18",
-    "three": "^0.150.1"
+    "three": "^0.153.0"
   },
   "devDependencies": {
-    "@types/three": "^0.149.0",
+    "@types/three": "^0.152.1",
     "autoprefixer": "^10.4.14",
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0",

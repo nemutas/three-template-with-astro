@@ -18,7 +18,6 @@ class WebGL {
     this.renderer.setPixelRatio(window.devicePixelRatio)
     this.renderer.setSize(width, height)
     this.renderer.shadowMap.enabled = true
-    this.renderer.outputEncoding = THREE.sRGBEncoding
 
     this.scene = new THREE.Scene()
     this.camera = new THREE.PerspectiveCamera(50, aspect, 0.01, 100)
@@ -45,7 +44,7 @@ class WebGL {
   }
 
   setStats(container: HTMLElement) {
-    this.stats = Stats()
+    this.stats = new Stats()
     container.appendChild(this.stats.dom)
   }
 
