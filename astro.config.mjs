@@ -5,6 +5,9 @@ import glsl from 'vite-plugin-glsl'
 export default defineConfig({
   site: 'https://nemutas.github.io',
   base: '/three-template-with-astro',
+  server: {
+    host: true,
+  },
   vite: {
     plugins: [glsl()],
     build: {
